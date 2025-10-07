@@ -33,4 +33,4 @@ services:
           name: vaaniai-backend
           property: host
       - key: NODE_VERSION
-        value: 18.17.0
+        value: 20.5.0
