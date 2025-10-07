@@ -1,0 +1,29 @@
+{
+  "name": "vaaniai",
+  "version": "1.0.0",
+  "description": "AI-Powered Voice Captioning Platform",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "cd frontend && yarn start",
+    "dev:backend": "cd backend && uvicorn server:app --reload --host 0.0.0.0 --port 8000",
+    "build:frontend": "cd frontend && yarn install && yarn build",
+    "build:backend": "cd backend && pip install -r requirements.txt",
+    "start:frontend": "cd frontend && npx serve -s build -l 3000",
+    "start:backend": "cd backend && uvicorn server:app --host 0.0.0.0 --port 8000",
+    "install:all": "cd frontend && yarn install && cd ../backend && pip install -r requirements.txt",
+    "test": "cd frontend && yarn test && cd ../backend && pytest",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "vaani",
+    "ai",
+    "voice",
+    "captioning",
+    "react",
+    "fastapi"
+  ],
+  "author": "VaaniAI Team",
+  "license": "MIT"
+}
