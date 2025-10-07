@@ -27,10 +27,7 @@ services:
     buildCommand: yarn install && yarn build
     startCommand: npx serve -s build -l $PORT
     envVars:
-      - key: https://vaaniai-backend-88re.onrender.com
-        fromService:
-          type: web
-          name: vaaniai-backend
-          property: host
+      - key: REACT_APP_BACKEND_URL
+        value: "https://vaaniai-backend-88re.onrender.com"
       - key: NODE_VERSION
         value: 20.15.0
